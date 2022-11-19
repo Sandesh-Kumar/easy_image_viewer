@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart' show CupertinoActivityIndicator;
 import 'package:flutter/material.dart';
 
 /// A full-sized view that displays the given image, supporting pinch & zoom
@@ -52,7 +53,15 @@ class _EasyImageViewState extends State<EasyImageView>
 
   @override
   Widget build(BuildContext context) {
-    final image = Image(image: widget.imageProvider);
+    final image = Image(image: widget.imageProvider, loadingBuilder: (BuildContext context, Widget child,
+              ImageChunkEvent? loadingProgress) {
+        if (loadingProgress == null) return child;
+        return const Center(
+          child: CupertinoActivityIndicator(
+            color: Colors.white,
+          ),
+        );
+      });
     return SizedBox.expand(
         key: const Key('easy_image_sized_box'),
         child: InteractiveViewer(
