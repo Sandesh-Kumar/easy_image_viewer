@@ -109,7 +109,7 @@ class _EasyImageViewerDismissibleDialogState
                       top: 5,
                       right: 5,
                       child: IconButton(
-                        icon: const Icon(Icons.close),
+                        icon: const Icon(Icons.cancel),
                         color: widget.closeButtonColor,
                         tooltip: widget.closeButtonTooltip,
                         onPressed: () {
