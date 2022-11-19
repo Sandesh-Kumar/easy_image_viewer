@@ -100,6 +100,7 @@ class _EasyImageViewerDismissibleDialogState extends State<EasyImageViewerDismis
                   top: 5,
                   right: 5,
                   child: IconButton(
+                    iconSize: 30,
                     icon: const Icon(Icons.cancel),
                     color: widget.closeButtonColor,
                     tooltip: widget.closeButtonTooltip,
@@ -111,7 +112,8 @@ class _EasyImageViewerDismissibleDialogState extends State<EasyImageViewerDismis
               Align(
                   alignment: Alignment.centerRight,
                   child: IconButton(
-                    icon: const Icon(Icons.arrow_circle_right),
+                    iconSize: 30,
+                    icon: const Icon(Icons.arrow_circle_right_outlined),
                     color: widget.closeButtonColor,
                     tooltip: "Next",
                     onPressed: () {
@@ -123,7 +125,8 @@ class _EasyImageViewerDismissibleDialogState extends State<EasyImageViewerDismis
               Align(
                 alignment: Alignment.centerLeft,
                 child: IconButton(
-                  icon: const Icon(Icons.arrow_circle_left),
+                  iconSize: 30,
+                  icon: const Icon(Icons.arrow_circle_left_outlined),
                   color: widget.closeButtonColor,
                   tooltip: "Previous",
                   onPressed: () {
